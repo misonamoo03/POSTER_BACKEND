@@ -46,7 +46,7 @@ public class ApiRepository {
             em.persist(poster);
     }
 
-    public List<Poster> findPosterHealth(int type) {
+    public List<Poster> findPosterOne(int type) {
         return em.createQuery("select p from Poster p where p.posterType = :posterType", Poster.class)
                 .setParameter("posterType", type)
                 .getResultList();

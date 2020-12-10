@@ -13,6 +13,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Type 1 미용
+ * Type 2 음식점
+ * Type 3 헬스
+ * Type 4 주점
+ */
 @RestController
 public class ApiController {
 
@@ -51,13 +57,43 @@ public class ApiController {
         return resultMap;
     }*/
 
-    // 포스터 단건 조회
+    // 포스터 Health 조회
     @GetMapping("/api/poster/health")
     public Map<String, Object> findPosterHealth(Poster poster) {
         Map<String, Object> resultMap = new HashMap<>();
         List<Poster> list = new ArrayList<>();
         list = apiService.findPosterHealth(3);
         resultMap.put("health",list);
+        return resultMap;
+    }
+
+    // 포스터 Food 조회
+    @GetMapping("/api/poster/food")
+    public Map<String, Object> findPosterFood(Poster poster) {
+        Map<String, Object> resultMap = new HashMap<>();
+        List<Poster> list = new ArrayList<>();
+        list = apiService.findPosterFood(2);
+        resultMap.put("food",list);
+        return resultMap;
+    }
+
+    // 포스터 Beauty 조회
+    @GetMapping("/api/poster/beauty")
+    public Map<String, Object> findPosterBeauty(Poster poster) {
+        Map<String, Object> resultMap = new HashMap<>();
+        List<Poster> list = new ArrayList<>();
+        list = apiService.findPosterBeauty(1);
+        resultMap.put("beauty",list);
+        return resultMap;
+    }
+
+    // 포스터 bar 조회
+    @GetMapping("/api/poster/bar")
+    public Map<String, Object> findPosterBar(Poster poster) {
+        Map<String, Object> resultMap = new HashMap<>();
+        List<Poster> list = new ArrayList<>();
+        list = apiService.findPosterBar(4);
+        resultMap.put("bar",list);
         return resultMap;
     }
 }

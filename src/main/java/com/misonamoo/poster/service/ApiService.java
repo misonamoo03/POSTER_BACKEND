@@ -61,6 +61,18 @@ public class ApiService {
 
 
     public List<Poster> findPosterHealth(int type) {
-        return apiRepository.findPosterHealth(type);
+        return apiRepository.findPosterOne(type);
+    }
+
+    public List<Poster> findPosterFood(int type) {
+        return apiRepository.findPosterOne(type);
+    }
+
+    public List<Poster> findPosterBeauty(int type) {
+        return apiRepository.findPosterOne(type);
+    }
+
+    public List<Poster> findPosterBar(int type) {
+        return apiRepository.findPosterOne(type);
     }
 }

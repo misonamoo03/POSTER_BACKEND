@@ -60,17 +60,22 @@ public class ApiServiceTests {
         fail("예외가 발생한다.");
     }*/
 
+    /* PosterType
+     1 : 미용
+     2 : 음식점
+     3 : 헬스
+     */
     @Test
     @Rollback(false)
     public void 포스터저장() throws Exception {
         Poster poster = new Poster();
-        poster.setPosterType(3);
-        poster.setPosterTitle("헬스장 포스터 제목 7");
-        poster.setPosterContent("헬스장 포스터 제목 7");
+        poster.setPosterType(4);
+        poster.setPosterTitle("주점 포스터 제목 2");
+        poster.setPosterContent("주점 포스터 제목 2");
         poster.setPosterRegistDt(new Date());
 
         // 로그인 된 유저로 처리
-        poster.setPosterRegister(5L);
+        poster.setPosterRegister(2L);
         Long savedNo = apiService.joinPoster(poster);
 
         assertEquals(poster, apiRepository.findPosterOne(savedNo));
