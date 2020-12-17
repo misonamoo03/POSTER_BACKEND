@@ -17,7 +17,7 @@ public class ApiService {
     private final ApiRepository apiRepository;
 
     private void validateDuplicateCategory(Category category) {
-        List<Category> findCategories = apiRepository.findByName(category.getCtgryNm());
+        List<Category> findCategories = apiRepository.findByName(category.getCtgryEngNm());
         if(!findCategories.isEmpty()) {
             throw new IllegalStateException("이미 존재하는 회원입니다.");
         }

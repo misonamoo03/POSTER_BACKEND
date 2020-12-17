@@ -28,6 +28,9 @@ public class Poster {
     @Column(name="POSTER_TYPE")
     private int posterType;
 
+    @Column(name="POSTER_TYPE_NM")
+    private String posterTypeNm;
+
     @Column(name="POSTER_REGIST_DT")
     private Date posterRegistDt;
 

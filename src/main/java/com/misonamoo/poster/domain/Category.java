@@ -19,8 +19,11 @@ public class Category {
     @Column(name = "CTGRY_NO")
     private Long ctgryNo;
 
-    @Column(name = "CTGRY_NM")
-    private String ctgryNm;
+    @Column(name = "CTGRY_ENG_NM")
+    private String ctgryEngNm;
+
+    @Column(name = "CTGRY_KOR_NM")
+    private String ctgryKorNm;
 
     @Column(name="CTGRY_REGISTER")
     private Long ctgryRegister;

@@ -27,9 +27,9 @@ public class ApiRepository {
                 .getResultList();
     }
 
-    public List<Category> findByName(String name) {
-        return em.createQuery("select c from Category c where c.ctgryNm = :ctgryNm", Category.class)
-                .setParameter("ctgryNm", name)
+    public List<Category> findByName(String engName) {
+        return em.createQuery("select c from Category c where c.ctgryEngNm = :ctgryEngNm", Category.class)
+                .setParameter("ctgryEngNm", engName)
                 .getResultList();
     }
 
