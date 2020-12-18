@@ -14,6 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ApiService {
 
+
     private final ApiRepository apiRepository;
 
     private void validateDuplicateCategory(Category category) {
