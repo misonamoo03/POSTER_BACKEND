@@ -24,6 +24,9 @@ public class ApiService {
         }
     }
 
+    //test
+
+
     // 카테고리 전체 조회
     public List<Category> findCategories() {
         return apiRepository.findCategoryAll();
