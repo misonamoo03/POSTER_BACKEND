@@ -2,6 +2,7 @@ package com.misonamoo.poster.repository;
 
 import com.misonamoo.poster.domain.Category;
 import com.misonamoo.poster.domain.Poster;
+import com.misonamoo.poster.domain.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -50,5 +51,9 @@ public class ApiRepository {
         return em.createQuery("select p from Poster p where p.posterType = :posterType", Poster.class)
                 .setParameter("posterType", type)
                 .getResultList();
+    }
+
+    public void createUser(User user) {
+        em.persist(user);
     }
 }

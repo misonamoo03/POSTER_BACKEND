@@ -30,7 +30,7 @@ public class ApiServiceTests {
     @Rollback(false)
     public void 카테고리저장() throws Exception {
         Category category = new Category();
-        category.setCtgryNm("주점");
+        //category.setCtgryNm("주점");
         category.setCtgryRegistDt(new Date());
         category.setCtgryUpdtDt(new Date());
         // 로그인 된 유저로 처리

@@ -2,6 +2,7 @@ package com.misonamoo.poster.service;
 
 import com.misonamoo.poster.domain.Category;
 import com.misonamoo.poster.domain.Poster;
+import com.misonamoo.poster.domain.User;
 import com.misonamoo.poster.repository.ApiRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -78,5 +79,9 @@ public class ApiService {
 
     public List<Poster> findPosterBar(int type) {
         return apiRepository.findPosterOne(type);
+    }
+
+    public void createUser(User user) {
+         apiRepository.createUser(user);
     }
 }
